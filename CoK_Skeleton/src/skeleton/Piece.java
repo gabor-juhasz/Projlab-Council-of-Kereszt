@@ -2,26 +2,34 @@ package skeleton;
 
 public abstract class Piece {
 
-	public void moved(Tile t) {
+	public abstract void ability(Tile t);
+
+	public void moved(Tile t) { 
+		System.out.println("");
 	}
 	
-	public abstract void ability(Tile t);
-	
 	public void addItem(Item i) {
+		System.out.println("");
 	}
 	
 	public void removeItem(Item i) {
+		System.out.println("");
 	}
 	
-	public void useItem(Item i) {
+	public void useItem(Item i) { 
+		System.out.println("");
 	}
 	
-	public void setBodyTemp() {
+	public void setBodyTemp() { 
+		System.out.println("");
 	}
 	
 	public void setInWater(boolean value) {
+		System.out.println("");
 	}
 	
-	public Tile getTile() { return new Tile();
+	public Tile getTile() { 
+		System.out.println("");
+		return new Tile();
 	}
 }

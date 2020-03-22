@@ -1,7 +1,9 @@
 package skeleton;
 
 public class Explorer extends Piece {
-	public void ability(Tile t) {
+	
+	public void ability(Tile t) { 
+		System.out.println("");
 	}
 
 }

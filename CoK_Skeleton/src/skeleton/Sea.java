@@ -1,9 +1,12 @@
 package skeleton;
 
 public class Sea extends Tile {
-	public void addSnow() {
+	
+	public void addSnow() { 
+		System.out.println("");
 	}
 	
-	public void movedOn(Player p) {
+	public void movedOn(Player p) { 
+		System.out.println("");
 	}
 }
