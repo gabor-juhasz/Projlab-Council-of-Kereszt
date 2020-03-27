@@ -18,6 +18,8 @@ public class Player {
 		System.out.println("Válassza ki a futtatni kívánt szekvenciát");
 		System.out.println("1. Explorer checks capacity");
 		System.out.println("2. Eskimo builds igloo");
+		
+		//Válasz beolvasása
 		Scanner scr = new Scanner(System.in);
 		int i = scr.nextInt();
 		scr.close();
