@@ -3,7 +3,7 @@ package skeleton;
 public class Eskimo extends Piece {
 	
 	public void ability(Tile t) { 
-		System.out.println("");
+		System.out.println("Eskimo.ability()");
 	}
 
 }

@@ -3,11 +3,11 @@ package skeleton;
 public class Ice extends Tile {
 	
 	public void movedOn(Player p) {
-		System.out.println("");
+		System.out.println("Ice.movedOn()");
 	}
 	
 	public Item getItem() { 
-		System.out.println("");
+		System.out.println("Ice.getItem()");
 		return new Food();
 	}
 }
