@@ -16,8 +16,8 @@ public class Player {
 		
 		//Mivel 2 szekvencia is ezzel a függvénnyel kezdõdik, ezért meg kell kérdezni, hogy melyik szekvenciát akarjuk lefuttatni
 		System.out.println("Válassza ki a futtatni kívánt szekvenciát");
-		System.out.println("1. Explorer uses ability");
-		System.out.println("2. Player builds igloo");
+		System.out.println("1. Explorer checks capacity");
+		System.out.println("2. Eskimo builds igloo");
 		Scanner scr = new Scanner(System.in);
 		int i = scr.nextInt();
 		scr.close();
