@@ -20,8 +20,15 @@ public abstract class Piece {
 		System.out.println("Piece.useItem()");
 	}
 	
-	public void setBodyTemp() { 
-		System.out.println("Piece.setBodyTemp()");
+	public void incBodyTemp() { 
+		System.out.println("Piece.incBodyTemp()");
+	}
+	
+	public void decBodyTemp() { 
+		System.out.println("Piece.decBodyTemp()");
+		Game game = new Game();
+		
+		game.notifyPlayerDied(this);
 	}
 	
 	public void setInWater(boolean value) {
