@@ -7,6 +7,7 @@ public class Game implements EndGameListner {
 	}
 	
 	public void endGame(boolean win) {
+		//Értesítés a függvény meghívásáról
 		System.out.println("Game.endGame()");
 	}
 	
@@ -15,7 +16,11 @@ public class Game implements EndGameListner {
 	}
 	
 	public void notifyWin() { 
+		//Értesítés a függvény meghívásáról
 		System.out.println("Game.notifyWin()");
+		
+		//Függvény hívások
+		this.endGame(true);
 	}
 	
 	public void snowStorm() {

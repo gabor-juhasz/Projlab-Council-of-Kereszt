@@ -7,6 +7,7 @@ public class Tile {
 	}
 	
 	public void removeSnow() {
+		//Értesítés a függvény meghívásáról
 		System.out.println("Tile.removeSnow()");
 	}
 	
@@ -19,7 +20,10 @@ public class Tile {
 	}
 	
 	public int getSnow() { 
+		//Értesítés a függvény meghívásáról
 		System.out.println("Tile.getSnow()");
+		
+		//A szkeletonban a tesztelés kedvéért mindig nullát ad vissza
 		return 0;
 	}
 	
