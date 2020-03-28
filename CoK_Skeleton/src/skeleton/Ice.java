@@ -10,4 +10,8 @@ public class Ice extends Tile {
 		System.out.println("Ice.getItem()");
 		return new Food();
 	}
+	
+	public void setItem(Item i) {
+		System.out.println("Ice.setItem()");
+	}
 }
