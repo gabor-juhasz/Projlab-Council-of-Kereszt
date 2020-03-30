@@ -15,22 +15,20 @@ public abstract class Piece {
 		
 			//lokalis valtozok letrehozasa
 			Player p = new Player();
-			Scanner scan = new Scanner(System.in);
-			int n;
+			int userInput;
 			
 			do 
 			{
-				n = scan.nextInt();
-				if(n == 1)
+				userInput = Main.scanner.nextInt();
+				if(userInput == 1)
 					t = new Unstable();
-				else if(n == 2)
+				else if(userInput == 2)
 					t = new Hole();
-				else if(n == 3)
+				else if(userInput == 3)
 					t = new Sea();
-			} while (n < 1 || n > 3);
+			} while (userInput < 1 || userInput > 3);
 			
 	    
-			scan.close();
 			//fuggvenyhivasok
 			t.movedOn(p);
 		}

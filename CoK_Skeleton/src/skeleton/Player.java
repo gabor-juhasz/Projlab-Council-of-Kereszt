@@ -35,11 +35,10 @@ public class Player {
 		System.out.println("2. Eskimo builds igloo");
 		
 		//Válasz beolvasása
-		Scanner scanner = new Scanner(System.in);
 		int userInput;
 
 		do {
-			userInput = scanner.nextInt();
+			userInput = Main.scanner.nextInt();
 			
 			if(userInput == 1) {
 				Explorer explorer = new Explorer();	//Ha az elsõt választjuk, akkor az Explorer ability függvényét hívjuk meg
@@ -51,7 +50,6 @@ public class Player {
 			}
 			else System.out.println("Rossz input!");
 		} while (userInput < 1 || userInput > 2);
-		scanner.close();
 	}
 	
 	public void pickUpItem(Tile t) {
@@ -70,9 +68,8 @@ public class Player {
 		//Elágazás, itt a felhasználó kiválaszthatja, hogy mely szekvenciát szeretné a továbbiakban futtatni
 		//Ezzel lényegében azt szimuláljuk, hogy a kiválasztott típusú item-et veszi fel a játékos,
 		//majd használja is azt.
-		Scanner scanner = new Scanner(System.in);
 	    System.out.println("Válassza ki a futtatni kívánt szekvenciát\n" + 
-	    				   "1. Player uses shovel\n " + 
+	    				   "1. Player uses shovel\n" + 
 	    				   "2. Player uses suit\n" +
 	    				   "3. Player uses part\n" +
 	    				   "4. Player uses rope\n" +
@@ -82,7 +79,7 @@ public class Player {
 	    int userInput;
 	    do 
 	    {
-		    userInput = scanner.nextInt();
+		    userInput = Main.scanner.nextInt();
 		    //Majd az esetekre bontás
 	    	switch (userInput)
 	    	{
@@ -105,8 +102,7 @@ public class Player {
 	    			System.out.println("Rossz input!");
 	    			break;
 	    	}
-	    } while (userInput < 1 || userInput > 6);
-	    scanner.close();
+	    } while (userInput < 1 || userInput > 5);
 	    useItem(i);
 	}
 }
