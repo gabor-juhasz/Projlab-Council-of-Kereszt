@@ -1,7 +1,5 @@
 package skeleton;
 
-import java.util.Scanner;
-
 public abstract class Piece {
 
 	public abstract void ability(Tile t);
