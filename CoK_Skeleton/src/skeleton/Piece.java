@@ -66,6 +66,8 @@ public abstract class Piece {
 		System.out.println("Piece.getInWater()");
 	}
 	
+	//True parameterrel a vizbe helyezi a babut (pl. Unstable flip() fuggvenye)
+	//False parameterrel "kihuzzuk" a vizbol a babut (pl. Suit used() fuggvenye)
 	public void setInWater(boolean value) {
 		//Jelzi, hogy a karakter vízbe esett
 		System.out.println("Piece.setInWater()");
