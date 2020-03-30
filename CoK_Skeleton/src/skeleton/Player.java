@@ -35,20 +35,23 @@ public class Player {
 		System.out.println("2. Eskimo builds igloo");
 		
 		//Válasz beolvasása
-		Scanner scr = new Scanner(System.in);
-		int i = scr.nextInt();
-		scr.close();
-		
-		if(i == 1) {
-			Explorer exp = new Explorer();	//Ha az elsõt választjuk, akkor az Explorer ability függvényét hívjuk meg
-			exp.ability(t);
-		}
-		else {
-			Eskimo esk = new Eskimo();	//Ha a másodikat választjuk, akkor az Eskimo ability függvényét hívjuk meg
-			esk.ability(t);
-		}
+		Scanner scanner = new Scanner(System.in);
+		int userInput;
 
-		
+		do {
+			userInput = scanner.nextInt();
+			
+			if(userInput == 1) {
+				Explorer explorer = new Explorer();	//Ha az elsõt választjuk, akkor az Explorer ability függvényét hívjuk meg
+				explorer.ability(t);
+			}
+			else if(userInput == 2){
+				Eskimo eskimo = new Eskimo();	//Ha a másodikat választjuk, akkor az Eskimo ability függvényét hívjuk meg
+				eskimo.ability(t);
+			}
+			else System.out.println("Rossz input!");
+		} while (userInput < 1 || userInput > 2);
+		scanner.close();
 	}
 	
 	public void pickUpItem(Tile t) {
