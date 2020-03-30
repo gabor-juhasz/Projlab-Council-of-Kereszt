@@ -1,8 +1,4 @@
 package skeleton;
-import java.util.*;
-
-import java.util.Scanner;
-
 import java.util.Scanner;
 
 public class Player {
@@ -78,32 +74,33 @@ public class Player {
 	    				   "4. Player uses rope\n" +
 	    				   "5. Player eats food\n");
 	    //Válasz beolvasása
-	    int userInput = scanner.nextInt();
-	    switch (userInput)
+	    int userInput;
+	    do 
 	    {
-	        case 1:
-	            i = new Shovel();
-	            useItem(i);
-	            break;
-	        case 2:
-	        	i = new Suit();
-				useItem(i);
-				break;
-	        case 3:
-	            i = new Part();
-	            useItem(i);
-	            break;
-	        case 4:
-	            i = new Rope();
-	            useItem(i);
-	            break;
-	        case 5:
-	            i = new Food();
-	            useItem(i);
-	            break;
-	        default:
-	        	System.out.println("Rossz input!");
-	        	break;
-	    }
+	    	userInput = scanner.nextInt();
+	    	switch (userInput)
+	    	{
+	    		case 1:
+	    			i = new Shovel();
+	    			break;
+	    		case 2:
+	    			i = new Suit();
+					break;
+	    		case 3:
+	    			i = new Part();
+	    			break;
+	    		case 4:
+	    			i = new Rope();
+	    			break;
+	    		case 5:
+	    			i = new Food();
+	    			break;
+	    		default:
+	    			System.out.println("Rossz input!");
+	    			break;
+	    	}
+	    } while (userInput < 1 || userInput > 6);
+	    scanner.close();
+	    useItem(i);
 	}
 }
