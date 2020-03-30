@@ -18,6 +18,6 @@ public class Suit implements Item {
 		System.out.println("Suit.getDirection()");
 		
 		//Egy újonnan létrehozott lokális változót adunk vissza a tesztelés kedvéért
-		return new Tile();
+		return new Ice();
 	}
 }

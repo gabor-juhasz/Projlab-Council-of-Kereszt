@@ -1,8 +1,4 @@
 package skeleton;
-import java.util.*;
-
-import java.util.Scanner;
-
 import java.util.Scanner;
 
 public class Player {
@@ -39,20 +35,23 @@ public class Player {
 		System.out.println("2. Eskimo builds igloo");
 		
 		//Válasz beolvasása
-		Scanner scr = new Scanner(System.in);
-		int i = scr.nextInt();
-		scr.close();
-		
-		if(i == 1) {
-			Explorer exp = new Explorer();	//Ha az elsõt választjuk, akkor az Explorer ability függvényét hívjuk meg
-			exp.ability(t);
-		}
-		else {
-			Eskimo esk = new Eskimo();	//Ha a másodikat választjuk, akkor az Eskimo ability függvényét hívjuk meg
-			esk.ability(t);
-		}
+		Scanner scanner = new Scanner(System.in);
+		int userInput;
 
-		
+		do {
+			userInput = scanner.nextInt();
+			
+			if(userInput == 1) {
+				Explorer explorer = new Explorer();	//Ha az elsõt választjuk, akkor az Explorer ability függvényét hívjuk meg
+				explorer.ability(t);
+			}
+			else if(userInput == 2){
+				Eskimo eskimo = new Eskimo();	//Ha a másodikat választjuk, akkor az Eskimo ability függvényét hívjuk meg
+				eskimo.ability(t);
+			}
+			else System.out.println("Rossz input!");
+		} while (userInput < 1 || userInput > 2);
+		scanner.close();
 	}
 	
 	public void pickUpItem(Tile t) {
@@ -79,33 +78,35 @@ public class Player {
 	    				   "4. Player uses rope\n" +
 	    				   "5. Player eats food\n");
 	    //Válasz beolvasása
-	    int userInput = scanner.nextInt();
-	    //Majd az esetekre bontás
-	    switch (userInput)
+
+	    int userInput;
+	    do 
 	    {
-	        case 1:
-	            i = new Shovel();
-	            useItem(i);
-	            break;
-	        case 2:
-	        	i = new Suit();
-				useItem(i);
-				break;
-	        case 3:
-	            i = new Part();
-	            useItem(i);
-	            break;
-	        case 4:
-	            i = new Rope();
-	            useItem(i);
-	            break;
-	        case 5:
-	            i = new Food();
-	            useItem(i);
-	            break;
-	        default:
-	        	System.out.println("Rossz input!");
-	        	break;
-	    }
+		    userInput = scanner.nextInt();
+		    //Majd az esetekre bontás
+	    	switch (userInput)
+	    	{
+	    		case 1:
+	    			i = new Shovel();
+	    			break;
+	    		case 2:
+	    			i = new Suit();
+					break;
+	    		case 3:
+	    			i = new Part();
+	    			break;
+	    		case 4:
+	    			i = new Rope();
+	    			break;
+	    		case 5:
+	    			i = new Food();
+	    			break;
+	    		default:
+	    			System.out.println("Rossz input!");
+	    			break;
+	    	}
+	    } while (userInput < 1 || userInput > 6);
+	    scanner.close();
+	    useItem(i);
 	}
 }
