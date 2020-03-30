@@ -6,7 +6,8 @@ public class Explorer extends Piece {
 		//Explorer használja a képességét, megnézi a szomszédos mezõ teherbírását
 		System.out.println("Explorer.ability()");
 		
-		int capacity = t.getCapacity(); 	//Tile getCapacity függvényének meghívása		
+		//Tile getCapacity függvényének meghívása
+		t.getCapacity(); 			
 	}
 
 }

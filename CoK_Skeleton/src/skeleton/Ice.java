@@ -13,6 +13,7 @@ public class Ice extends Tile {
 	}
 	
 	public void setItem(Item i) {
+		//Elhelyezi a kapott tárgyat a jégtáblán
 		System.out.println("Ice.setItem()");
 	}
 }

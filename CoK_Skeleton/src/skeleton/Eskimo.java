@@ -6,7 +6,8 @@ public class Eskimo extends Piece {
 		//Eskimo használja a képességét, azaz iglut épít
 		System.out.println("Eskimo.ability()");
 		
-		t.buildIgloo();		//Tile buildIgloo függvényének meghívása
+		//Tile buildIgloo függvényének meghívása
+		t.buildIgloo();		
 	}
 
 }
