@@ -3,6 +3,9 @@ package skeleton;
 public class Sea extends Tile {
 	
 	public void addSnow() { 
+		//A Tile addSnow() fuggvenye felul lesz definialva,
+		//hiszen jatekmechanikailag semmi ertelme nem lenne
+		//annak, ha a tenger Tile-ok be lennenek havazva
 		System.out.println("Sea.addSnow()");
 	}
 	

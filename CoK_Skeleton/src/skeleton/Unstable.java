@@ -6,8 +6,8 @@ public class Unstable extends Ice {
 		System.out.println("Unstable.movedOn()");
 		
 		//Teszteseten kivul, normal korulmenyek kozott akkor fordul
-		//at, ha tullepjuk az instabil mezo teherbirasat (pl. mikor a
-		//4. babu ralep a 3 "kapacitasu" mezore)
+		//at, ha tullepjuk az instabil tile teherbirasat (pl. mikor a
+		//4. babu ralep a 3 "kapacitasu" tile-re)
 		this.flip();
 	}
 	

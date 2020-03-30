@@ -3,6 +3,7 @@ package skeleton;
 public class Tile {
 	
 	public void addSnow() {
+		//Horeteget teszunk egy tile-re
 		System.out.println("Tile.addSnow()");
 	}
 	
@@ -12,10 +13,15 @@ public class Tile {
 	}
 	
 	public void movedOn(Player p) { 
+		//Akkor hivodik meg, hogyha ralepunk az adott tile-re
+		//Termeszetesen kulonbozo fele tablak mashogy reagalnak erre
+		//Pl. instabil ellenorzi a kapacitast, lyuknal a babu
+		//azonnal beleesik a vizbe, etc.
 		System.out.println("Tile.movedOn()");
 	}
 	
-	public void buildIgloo() { 
+	public void buildIgloo() {
+		//Epitunk egy iglut az adott mezon
 		System.out.println("Tile.buildIgloo()");
 	}
 	
@@ -28,6 +34,7 @@ public class Tile {
 	}
 	
 	public int getCapacity() { 
+		//Visszaadja a Tile kapacitasat, azaz mennyi babut bir el
 		System.out.println("Tile.getCapacity()");
 		return 0;
 	}
