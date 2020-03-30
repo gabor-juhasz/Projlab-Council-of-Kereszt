@@ -21,12 +21,12 @@ public class Player {
 	}
 	
 	public void useItem(Item i) { 
-		//Értesítés a függvény meghívásáról
+		//A játékos használja a bábujánál levõ itemet
 		System.out.println("Player.useItem()");
-		//Lokális változók létrehozása
+		//Lokális változónak létrehozunk egy bábut
 		Piece eskimoPiece = new Eskimo();
 		
-		//Függvény hívások
+		//Majd meghívjuk a bábu useItem függvényét
 		eskimoPiece.useItem(i);
 	}
 	
@@ -56,15 +56,16 @@ public class Player {
 	}
 	
 	public void pickUpItem(Tile t) {
-		//Értesítés a függvény meghívásáról
+		//A játékot felveszi a tárgyat
 		System.out.println("Player.pickUpItem()");
-		//Lokális változók létrehozása
 		Ice ice = new Ice();
 		Piece eskimoPiece = new Eskimo();
 		
-		//Függvény hívások
+		//Elõször lekérjük, hogy azon a mezõn a játékos bábuja van, mennyi hó van.
 		ice.getSnow();
+		//Majd mivel nincs hó rajta, felvesszük a tárgyat
 		Item i = ice.getItem();
+		//És hozzáadjuk a bábuhoz
 		eskimoPiece.addItem(i);
 		
 		//Elágazás, itt a felhasználó kiválaszthatja, hogy mely szekvenciát szeretné a továbbiakban futtatni
@@ -79,6 +80,7 @@ public class Player {
 	    				   "5. Player eats food\n");
 	    //Válasz beolvasása
 	    int userInput = scanner.nextInt();
+	    //Majd az esetekre bontás
 	    switch (userInput)
 	    {
 	        case 1:

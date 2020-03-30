@@ -6,7 +6,8 @@ public class Ice extends Tile {
 		System.out.println("Ice.movedOn()");
 	}
 	
-	public Item getItem() { 
+	public Item getItem() {
+		//Lekérjük milyen item van a jégtáblán
 		System.out.println("Ice.getItem()");
 		return new Food();
 	}

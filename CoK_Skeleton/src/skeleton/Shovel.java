@@ -3,12 +3,13 @@ package skeleton;
 public class Shovel implements Item {
 	
 	public void used(Piece p) { 
-		//Értesítés a függvény meghívásáról
+		//Használjuk az ásót
 		System.out.println("Shovel.used()");
 		
-		//Függvény hívások
+		//Lekérjük melyik tile-ról lapátolunk le havat
 		Tile t = p.getTile();
-		//Az ásóval két réteg havat tudunk eltávolítani egy helyett
+		//Majd leveszünk róla két réteget, ugyanis
+		//az ásóval két réteg havat tudunk eltávolítani az alap egy helyett
 		t.removeSnow();
 		t.removeSnow();
 	}

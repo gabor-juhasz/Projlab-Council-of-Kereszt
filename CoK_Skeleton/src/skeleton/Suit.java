@@ -3,10 +3,10 @@ package skeleton;
 public class Suit implements Item {
 	
 	public void used(Piece p) {
-		//Értesítés a függvény meghívásáról
+		//Használjuk a búvárruhát
 		System.out.println("Suit.used()");
 		
-		//Függvény hívások
+		//A búvárruhával át tudunk menni vízen is
 		p.getInWater();
 		p.setInWater(false);
 		Tile t = this.getDirection();
@@ -14,7 +14,7 @@ public class Suit implements Item {
 	}
 	
 	public Tile getDirection() { 
-		//Értesítés a függvény meghívásáról
+		//Lekérdezzük az irányt
 		System.out.println("Suit.getDirection()");
 		
 		//Egy újonnan létrehozott lokális változót adunk vissza a tesztelés kedvéért
