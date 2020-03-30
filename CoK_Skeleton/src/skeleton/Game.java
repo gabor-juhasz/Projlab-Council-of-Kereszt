@@ -18,7 +18,7 @@ public class Game implements EndGameListner {
 	}
 	
 	public void endGame(boolean win) {
-		//Értesítés a függvény meghívásáról
+		//Véget ér a játék
 		System.out.println("Game.endGame()");
 	}
 	
@@ -29,10 +29,10 @@ public class Game implements EndGameListner {
 	}
 	
 	public void notifyWin() { 
-		//Értesítés a függvény meghívásáról
+		//Megnyerjük a játékot
 		System.out.println("Game.notifyWin()");
 		
-		//Függvény hívások
+		//Ezzel véget ér a játék
 		this.endGame(true);
 	}
 	

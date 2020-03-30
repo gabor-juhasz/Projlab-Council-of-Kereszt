@@ -37,7 +37,7 @@ public abstract class Piece {
 	}
 	
 	public void addItem(Item i) {
-		//Értesítés a függvény meghívásáról
+		//Hozzáadja az itemet a játékos figurájához
 		System.out.println("Piece.addItem()");
 	}
 	
@@ -46,15 +46,15 @@ public abstract class Piece {
 	}
 	
 	public void useItem(Item i) { 
-		//Értesítés a függvény meghívásáról
+		//Használja az itemet
 		System.out.println("Piece.useItem()");
 
-		//Függvény hívások
+		//Elhasználja az itemet
 		i.used(this);
 	}
 	
 	public void incBodyTemp() { 
-		//Értesítés a függvény meghívásáról
+		//Növeli a testhõ értékét 1-el
 		System.out.println("Piece.incBodyTemp()");
 	}
 	
@@ -64,17 +64,17 @@ public abstract class Piece {
 	}
 	
 	public void getInWater() {
-		//Értesítés a függvény meghívásáról
+		//Visszaadja, hogy a karakter vízben van-e
 		System.out.println("Piece.getInWater()");
 	}
 	
 	public void setInWater(boolean value) {
-		//Értesítés a függvény meghívásáról
+		//Jelzi, hogy a karakter vízbe esett
 		System.out.println("Piece.setInWater()");
 	}
 	
 	public Tile getTile() { 
-		//Értesítés a függvény meghívásáról
+		//Lekérdezi a tile-t amin tartózkodik a játékos
 		System.out.println("Piece.getTile()");
 		
 		//Egy újonnan létrehozott lokális változót adunk vissza a tesztelés kedvéért

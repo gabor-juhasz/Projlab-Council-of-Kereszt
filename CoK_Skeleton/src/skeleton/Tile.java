@@ -7,7 +7,7 @@ public class Tile {
 	}
 	
 	public void removeSnow() {
-		//Értesítés a függvény meghívásáról
+		//Eltávolítunk egy réteg havat a tile-ról
 		System.out.println("Tile.removeSnow()");
 	}
 	
@@ -20,7 +20,7 @@ public class Tile {
 	}
 	
 	public int getSnow() { 
-		//Értesítés a függvény meghívásáról
+		//Lekérjük mennyi hó van a tile-on
 		System.out.println("Tile.getSnow()");
 		
 		//A szkeletonban a tesztelés kedvéért mindig nullát ad vissza
@@ -31,5 +31,4 @@ public class Tile {
 		System.out.println("Tile.getCapacity()");
 		return 0;
 	}
-
 }
