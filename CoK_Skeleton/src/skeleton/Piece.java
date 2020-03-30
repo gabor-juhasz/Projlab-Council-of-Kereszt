@@ -5,7 +5,8 @@ import java.util.Scanner;
 public abstract class Piece {
 
 	public abstract void ability(Tile t);
-
+	
+	//
 	public void moved(Tile t) { 
 		//Értesítés a függvény meghívásáról
 		System.out.println("Piece.moved()");
@@ -20,11 +21,11 @@ public abstract class Piece {
 			do 
 			{
 				userInput = Main.scanner.nextInt();
-				if(userInput == 1)
+				if(userInput == 1)			//elso esetben azt teszteljuk, amikor egy babu egy instabil jegmezore lep
 					t = new Unstable();
-				else if(userInput == 2)
+				else if(userInput == 2)		//masodik esetben az kovetkezik, amikor lyukra lepunk
 					t = new Hole();
-				else if(userInput == 3)
+				else if(userInput == 3)		//vegso esetben pedig hogyha egy tenger mezore probalnank lepni
 					t = new Sea();
 			} while (userInput < 1 || userInput > 3);
 			

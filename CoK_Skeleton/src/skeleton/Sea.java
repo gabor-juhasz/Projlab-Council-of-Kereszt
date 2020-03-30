@@ -7,6 +7,8 @@ public class Sea extends Tile {
 	}
 	
 	public void movedOn(Player p) { 
+		//ra probalunk lepni majd a tengerre, viszont
+		//ez le lesz kezelve, hogy erre ne legyen mod
 		System.out.println("Sea.movedOn()");
 	}
 }
