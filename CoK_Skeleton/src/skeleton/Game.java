@@ -5,14 +5,14 @@ import java.io.File;
 public class Game implements EndGameListner {
 	
 	public void startGame() { 
-		//értesítés a fv meghívásáról
+		//Értesítés a fv meghívásáról
 		System.out.println("Game.startGame()");
-		//lokális változók létrehozása
+		//Lokális változók létrehozása
 		String s = new String("path.txt");
 		File setup = new File(s);
 		Board b = new Board();
 		
-		//függvény hívások
+		//Függvény hívások
 		this.readFile(s);
 		b.initBoard(setup);
 	}
@@ -23,13 +23,14 @@ public class Game implements EndGameListner {
 	}
 	
 	public void notifyPlayerDied(Piece p) { 
+		//Így értesül a játék egy bábu haláláról
 		System.out.println("Game.notifyPlayerDied()");
 		
 		this.endGame(false);
 	}
 	
 	public void notifyWin() { 
-		//Megnyerjük a játékot
+		//Így értesül a játék a cél elérésérõl
 		System.out.println("Game.notifyWin()");
 		
 		//Ezzel véget ér a játék
@@ -37,6 +38,7 @@ public class Game implements EndGameListner {
 	}
 	
 	public void readFile(String s) {
+		//A pálya elrendezésérõl szóló txt beolvasása
 		System.out.println("Game.readFile()");
 	}
 	
@@ -45,7 +47,9 @@ public class Game implements EndGameListner {
 		Tile tile = new Tile();
 		Piece piece = new Eskimo();
 		
+		//Minden jégtáblára kerül egy réteg hó
 		tile.addSnow();
+		//Minden játékos veszít egy testhõt
 		piece.decBodyTemp();
 	}
 }
